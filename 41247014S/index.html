@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Stop!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside id="guide-panel">
+    <section>
+        <h3>Game Goal</h3>
+        <p>Collect all 5 shards and escape before the pursuer catches you.</p>
+    </section>
+    <section>
+        <h3>Controls</h3>
+        <p><strong>W A S D</strong> move<br>Mouse look around</p>
+    </section>
+    <section>
+        <h3>Shards & Items</h3>
+        <p><span class="legend-box shard-box"></span>Shard: collect 5 to win</p>
+        <p><span class="legend-box reveal-box"></span>Reveal: show shards and pursuer on the map</p>
+        <p><span class="legend-box speed-box"></span>Speed: move faster for a short time</p>
+    </section>
+</aside>
+
+<div id="game-container">
+    <canvas id="glcanvas" width="960" height="720"></canvas>
+
+    <div id="hud" class="hidden">
+        <div id="minimap-label"></div>
+        <div id="score-board">Shards 0 / 5</div>
+        <div id="status-line">Find all shards. Do not stop.</div>
+        <div id="buff-line"></div>
+    </div>
+
+    <div id="ui-layer">
+        <div id="main-menu" class="ui-panel">
+            <h1 class="game-title">don't stop!</h1>
+            <button id="btn-start" class="menu-btn">Start</button>
+        </div>
+
+        <div id="result-panel" class="ui-panel hidden">
+            <div class="result-card">
+                <h2 id="result-title">You Win</h2>
+                <p id="result-detail"></p>
+                <div class="result-actions">
+                    <button id="btn-restart" class="menu-btn">Restart</button>
+                    <button id="btn-result-menu" class="menu-btn">Main Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="cuon-matrix.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
